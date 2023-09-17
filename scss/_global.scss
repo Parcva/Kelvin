@@ -1,0 +1,46 @@
+html, body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: $black;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+
+  font-size: 34px;
+  font-weight: 600;
+  color: $black-title;
+}
+
+.logo { 
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+
+  position: relative;
+  padding: 0 10px 0px 0;
+
+  &__link {
+    color: $black;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    background-color: $yellow;
+  }
+}
+

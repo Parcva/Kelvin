@@ -1,0 +1,171 @@
+@media (max-width: 1100px) {
+
+  .nav {
+    .nav__menu {
+      position: absolute;
+      transform: translateY(-200%);
+      transition: all 0.3s ease-in;
+      background-color: $white;
+
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+   }
+
+    .nav__btn {
+      display: block ;
+    }
+
+    .nav__btn::before {
+      content: "";
+      position: fixed;
+      width: 33px;
+      height: 20px;
+
+      background-image: url('./../img/icons/btn-open.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      top: 53px;
+      right: 15px;
+    }
+  }
+
+  .nav.nav--active {
+    .nav__menu {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      transform: translateY(0%);
+
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 9;
+      padding: 46px 30px 0px 30px;
+    }
+
+    .nav__link {
+      font-size: 36px;
+      font-weight: 600;
+      color: $active;
+    }
+
+    .nav__link--active {
+      color: $black;
+    }
+
+    .nav__btn {
+      z-index: 10;
+    }
+
+    .nav__btn::before {
+      width: 22px;
+      height: 22px;
+
+      background-image: url('./../img/icons/btn-close.svg');
+    }
+
+  }
+
+  .header {
+    
+    .header__img {
+      height: 500px;
+    }
+  }
+
+  .benefits,
+  .portfolio,
+  .footer {
+    padding: 60px 0 !important;
+  }
+
+  .portfolio {
+
+    .portfolio__inner {
+      row-gap: 55px;
+    }
+
+    .portfolio__title {
+      margin-bottom: 40px;
+    }
+
+    .portfolio__img {
+      margin-bottom: 30px;  
+    }
+  }
+
+  .footer {
+
+    .footer__title {
+      margin-bottom: 20px;
+    }
+
+    .footer__text {
+      margin-bottom: 20px;
+    }
+
+    .footer__btn {
+      margin-bottom: 70px;
+    }
+
+    .footer__social {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+    .header {
+
+      .header__content {
+        display: block;
+      }
+
+      .header__content-inner {
+           min-width: 315px;
+
+           margin: 0 auto;
+           text-align: center;
+           margin-bottom: 20px;
+      }
+
+      .header__img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    .nav{
+      margin-bottom: 60px !important;
+    }
+    .benefits {
+      
+      .benefits__inner {
+        flex-direction: column;
+        row-gap: 60px;
+        align-items: center;
+        text-align: center;
+      }
+    }
+}
+
+@media (max-width: 550px)  {
+
+  .header {
+
+    .header__img {
+      height: 296px !important;
+      width: 367px !important;
+      object-fit: contain;
+    }
+  }
+}
